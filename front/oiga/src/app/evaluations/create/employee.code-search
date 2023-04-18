@@ -1,0 +1,280 @@
+# Query: employee
+# ContextLines: 1
+
+249 results - 21 files
+
+.angular\cache\13.3.10\babel-webpack\0de2ac605b1ca8a9823574e4376263bf.json:
+  1: {"ast":null,"code":"import { CommonModule } from '@angular/common';\nimport { evaluationsRoutingModule } from './evaluations-routing.module';\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport * as i0 from \"@angular/core\";\nexport let evaluationsModule = /*#__PURE__*/(() => {\n  class evaluationsModule {}\n\n  evaluationsModule.ɵfac = function evaluationsModule_Factory(t) {\n    return new (t || evaluationsModule)();\n  };\n\n  evaluationsModule.ɵmod = /*@__PURE__*/i0.ɵɵdefineNgModule({\n    type: evaluationsModule\n  });\n  evaluationsModule.ɵinj = /*@__PURE__*/i0.ɵɵdefineInjector({\n    imports: [[CommonModule, evaluationsRoutingModule, FormsModule, ReactiveFormsModule]]\n  });\n  return evaluationsModule;\n})();","map":null,"metadata":{},"sourceType":"module"}
+
+.angular\cache\13.3.10\babel-webpack\26e182db4057f08d29b4bd5afd16287e.json:
+  1: {"ast":null,"code":"import { FormGroup, FormControl } from '@angular/forms';\nimport * as i0 from \"@angular/core\";\nimport * as i1 from \"../evaluations.service\";\nimport * as i2 from \"@angular/router\";\nimport * as i3 from \"@angular/forms\";\nexport let ViewComponent = /*#__PURE__*/(() => {\n  class ViewComponent {\n    constructor(evaluationsService, route, router) {\n      this.evaluationsService = evaluationsService;\n      this.route = route;\n      this.router = router;\n    }\n\n    ngOnInit() {\n      this.id = this.route.snapshot.params['Id'];\n      this.evaluationsService.find(this.id).subscribe(data => {\n        this.evaluations = data;\n      });\n      this.form = new FormGroup({\n        gender: new FormControl(''),\n        team: new FormControl('')\n      });\n    }\n\n  }\n\n  ViewComponent.ɵfac = function ViewComponent_Factory(t) {\n    return new (t || ViewComponent)(i0.ɵɵdirectiveInject(i1.evaluationsService), i0.ɵɵdirectiveInject(i2.ActivatedRoute), i0.ɵɵdirectiveInject(i2.Router));\n  };\n\n  ViewComponent.ɵcmp = /*@__PURE__*/i0.ɵɵdefineComponent({\n    type: ViewComponent,\n    selectors: [[\"app-view\"]],\n    decls: 61,\n    vars: 9,\n    consts: [[1, \"container\"], [\"href\", \"#\", \"routerLink\", \"/evaluations/index\", 1, \"btn\", \"btn-primary\"], [3, \"formGroup\"], [\"formControlName\", \"gender\", \"id\", \"gender\", 1, \"form-control\", 3, \"ngModel\", \"ngModelChange\"], [\"value\", \"1\"], [\"value\", \"2\"], [\"value\", \"3\"], [\"formControlName\", \"team\", \"id\", \"team\", 1, \"form-control\", 3, \"ngModel\", \"ngModelChange\"]],\n    template: function ViewComponent_Template(rf, ctx) {\n      if (rf & 1) {\n        i0.ɵɵelementStart(0, \"div\", 0)(1, \"h1\");\n        i0.ɵɵtext(2, \"View evaluations\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(3, \"a\", 1);\n        i0.ɵɵtext(4, \"Back\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelement(5, \"br\")(6, \"br\");\n        i0.ɵɵelementStart(7, \"form\", 2)(8, \"div\")(9, \"strong\");\n        i0.ɵɵtext(10, \"ID:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(11, \"p\");\n        i0.ɵɵtext(12);\n        i0.ɵɵelementEnd()();\n        i0.ɵɵelementStart(13, \"div\")(14, \"strong\");\n        i0.ɵɵtext(15, \"Name:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(16, \"p\");\n        i0.ɵɵtext(17);\n        i0.ɵɵelementEnd()();\n        i0.ɵɵelementStart(18, \"div\")(19, \"strong\");\n        i0.ɵɵtext(20, \"E-Mail:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(21, \"p\");\n        i0.ɵɵtext(22);\n        i0.ɵɵelementEnd()();\n        i0.ɵɵelementStart(23, \"div\")(24, \"strong\");\n        i0.ɵɵtext(25, \"CPF:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(26, \"p\");\n⟪ 609 characters skipped ⟫);\n        i0.ɵɵelementStart(41, \"p\")(42, \"select\", 3);\n        i0.ɵɵlistener(\"ngModelChange\", function ViewComponent_Template_select_ngModelChange_42_listener($event) {\n          return ctx.evaluations.gender = $event;\n        });\n        i0.ɵɵelementStart(43, \"option\", 4);\n        i0.ɵɵtext(44, \"Male\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(45, \"option\", 5);\n        i0.ɵɵtext(46, \"Female\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(47, \"option\", 6);\n        i0.ɵɵtext(48, \"Other\");\n        i0.ɵɵelementEnd()()()();\n        i0.ɵɵelementStart(49, \"div\")(50, \"strong\");\n        i0.ɵɵtext(51, \"teamwork:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(52, \"p\")(53, \"select\", 7);\n        i0.ɵɵlistener(\"ngModelChange\", function ViewComponent_Template_select_ngModelChange_53_listener($event) {\n          return ctx.evaluations.team = $event;\n        });\n        i0.ɵɵelementStart(54, \"option\", 4);\n        i0.ɵɵtext(55, \"Backend\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(56, \"option\", 5);\n        i0.ɵɵtext(57, \"FrontEnd\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(58, \"option\", 6);\n        i0.ɵɵtext(59, \"Mobile\");\n        i0.ɵɵelementEnd()()()()();\n        i0.ɵɵelement(60, \"br\");\n        i0.ɵɵelementEnd();\n      }\n\n      if (rf & 2) {\n        i0.ɵɵadvance(7);\n        i0.ɵɵproperty(\"formGroup\", ctx.form);\n        i0.ɵɵadvance(5);\n        i0.ɵɵtextInterpolate(ctx.evaluations.id);\n        i0.ɵɵadvance(5);\n        i0.ɵɵtextInterpolate(ctx.evaluations.name);\n        i0.ɵɵadvance(5);\n        i0.ɵɵtextInterpolate(ctx.evaluations.email);\n        i0.ɵɵadvance(5);\n        i0.ɵɵtextInterpolate(ctx.evaluations.cpf);\n        i0.ɵɵadvance(5);\n        i0.ɵɵtextInterpolate(ctx.evaluations.startDate);\n        i0.ɵɵadvance(5);\n        i0.ɵɵtextInterpolate(ctx.evaluations.birthDate);\n        i0.ɵɵadvance(5);\n        i0.ɵɵproperty(\"ngModel\", ctx.evaluations.gender);\n        i0.ɵɵadvance(11);\n        i0.ɵɵproperty(\"ngModel\", ctx.evaluations.team);\n      }\n    },\n    directives: [i2.RouterLinkWithHref, i3.ɵNgNoValidate, i3.NgControlStatusGroup, i3.FormGroupDirective, i3.SelectControlValueAccessor, i3.NgControlStatus, i3.FormControlName, i3.NgSelectOption, i3.ɵNgSelectMultipleOption],\n    styles: [\"(()[_ngcontent-%COMP%]   =[_ngcontent-%COMP%] >  {// webpackBootstrap \\\"use strict\\\";})()[_ngcontent-%COMP%] ;{%BLOCK%}\"]\n  });\n  return ViewComponent;\n})();","map":null,"metadata":{},"sourceType":"module"}
+
+.angular\cache\13.3.10\babel-webpack\3651e9bf1d55c3662d30d1ad4f330532.json:
+  1: {"ast":null,"code":"import { FormGroup, FormControl, Validators } from '@angular/forms';\nimport * as i0 from \"@angular/core\";\nimport * as i1 from \"../evaluations.service\";\nimport * as i2 from \"@angular/router\";\nimport * as i3 from \"@angular/forms\";\nimport * as i4 from \"@angular/common\";\n\nfunction EditComponent_div_13_div_1_Template(rf, ctx) {\n  if (rf & 1) {\n    i0.ɵɵelementStart(0, \"div\");\n    i0.ɵɵtext(1, \"name is required.\");\n    i0.ɵɵelementEnd();\n  }\n}\n\nfunction EditComponent_div_13_Template(rf, ctx) {\n  if (rf & 1) {\n    i0.ɵɵelementStart(0, \"div\", 24);\n    i0.ɵɵtemplate(1, EditComponent_div_13_div_1_Template, 2, 0, \"div\", 25);\n    i0.ɵɵelementEnd();\n  }\n\n  if (rf & 2) {\n    const ctx_r0 = i0.ɵɵnextContext();\n    i0.ɵɵadvance(1);\n    i0.ɵɵproperty(\"ngIf\", ctx_r0.f[\"name\"].errors && ctx_r0.f[\"name\"].errors[\"required\"]);\n  }\n}\n\nfunction EditComponent_div_18_div_1_Template(rf, ctx) {\n  if (rf & 1) {\n    i0.ɵɵelementStart(0, \"div\");\n    i0.ɵɵtext(1, \"E-mail is required.\");\n    i0.ɵɵelementEnd();\n  }\n}\n\nfunction EditComponent_div_18_Template(rf, ctx) {\n  if (rf & 1) {\n   ⟪ 464 characters skipped ⟫n    --------------------------------------------\r\n    Created constructor\r\n    --------------------------------------------\r\n    --------------------------------------------*/\n    constructor(evaluationsService, route, router) {\n      this.evaluationsService = evaluationsService;\n      this.route = route;\n      this.router = router;\n    }\n    /**\r\n     * Write code on Method\r\n     *\r\n     * @return response()\r\n     */\n\n\n    ngOnInit() {\n      this.id = this.route.snapshot.params['Id'];\n      this.evaluationsService.find(this.id).subscribe(data => {\n        this.evaluations = data;\n      });\n      this.form = new FormGroup({\n        name: new FormControl('', [Validators.required]),\n        email: new FormControl('', Validators.required),\n        birthDate: new FormControl(''),\n        cpf: new FormControl(''),\n        startDate: new FormControl(''),\n        gender: new FormControl(''),\n        team: new FormControl('')\n      });\n    }\n    /**\r\n     * Write code on Method\r\n     *\r\n     * @return response()\r\n     */\n\n\n    get f() {\n      return this.form.controls;\n    }\n    /**\r\n     * Write code on Method\r\n     *\r\n     * @return response()\r\n     */\n\n\n    submit() {\n      console.log(this.form.value);\n      this.evaluationsService.update(this.id, this.form.value).subscribe(res => {\n        console.log('evaluations alterado!');\n        this.router.navigateByUrl('evaluations/index');\n      });\n    }\n\n  }\n\n  EditComponent.ɵfac = function EditComponent_Factory(t) {\n    return new (t || EditComponent)(i0.ɵɵdirectiveInject(i1.evaluationsService), i0.ɵɵdirectiveInject(i2.ActivatedRoute), i0.ɵɵdirectiveInject(i2.Router));\n  };\n\n  EditComponent.ɵcmp = /*@__PURE__*/i0.ɵɵdefineComponent({\n    type: EditComponent,\n    selectors: [[\"app-edit\"]],\n    decls: 54,\n    vars: 12,\n    consts: [[1, \"container\"], [\"href\", \"#\", \"routerLink\", \"/evaluations/index\", 1, \"btn\", \"btn-primary\"], [3, \"formGroup\", \"ngSubmit\"], [\"type\", \"hidden\", \"id\", \"id\", \"formControlName\", \"id\", 3, \"ngModel\", \"ngModelChange\"], [1, \"form-group\"], [\"for\", \"name\"], [\"formControlName\", \"name\", \"id\", \"name\", \"type\", \"text\", 1, \"form-control\", 3, \"ngModel\", \"ngModelChange\"], [\"class\", \"alert alert-danger\", 4, \"ngIf\"], [\"for\", \"email\"], [\"formControlName\", \"email\", \"id\", \"email\", \"type\", \"text\", 1, \"form-control\", 3, \"ngModel\", \"ngModelChange\"], [\"for\", \"cpf\"], [\"formControlName\", \"cpf\", \"id\", \"cpf\", \"type\", \"text\", 1, \"form-control\", 3, \"ngModel\", \"ngModelChange\"], [\"for\", \"birthDate\"], [\"formControlName\", \"birthDate\", \"id\", \"birthDate\", \"type\", \"text\", 1, \"form-control\", 3, \"ngModel\", \"ngModelChange\"], [\"for\", \"startDate\"], [\"formControlName\", \"startDate\", \"id\", \"startDate\", \"type\", \"text\", 1, \"form-control\", 3, \"ngMo⟪ 431 characters skipped ⟫", \"alert-danger\"], [4, \"ngIf\"]],\n    template: function EditComponent_Template(rf, ctx) {\n      if (rf & 1) {\n        i0.ɵɵelementStart(0, \"div\", 0)(1, \"h1\");\n        i0.ɵɵtext(2, \"Edit evaluations\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(3, \"a\", 1);\n        i0.ɵɵtext(4, \"Back\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelement(5, \"br\")(6, \"br\");\n        i0.ɵɵelementStart(7, \"form\", 2);\n        i0.ɵɵlistener(\"ngSubmit\", function EditComponent_Template_form_ngSubmit_7_listener() {\n          return ctx.submit();\n        });\n        i0.ɵɵelementStart(8, \"input\", 3);\n        i0.ɵɵlistener(\"ngModelChange\", function EditComponent_Template_input_ngModelChange_8_listener($event) {\n          return ctx.evaluations.id = $event;\n        });\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(9, \"div\", 4)(10, \"label\", 5);\n        i0.ɵɵtext(11, \"name:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(12, \"input\", 6);\n        i0.ɵɵlistener(\"ngModelChange\", function EditComponent_Template_input_ngModelChange_12_listener($event) {\n          return ctx.evaluations.name = $event;\n        });\n        i0.ɵɵelementEnd();\n        i0.ɵɵtemplate(13, EditComponent_div_13_Template, 2, 1, \"div\", 7);\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(14, \"div\", 4)(15, \"label\", 8);\n        i0.ɵɵtext(16, \"E-Mail\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(17, \"input\", 9);\n        i0.ɵɵlistener(\"ngModelChange\", function EditComponent_Template_input_ngModelChange_17_listener($event) {\n          return ctx.evaluations.email = $event;\n        });\n        i0.ɵɵelementEnd();\n        i0.ɵɵtemplate(18, EditComponent_div_18_Template, 2, 1, \"div\", 7);\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(19, \"div\", 4)(20, \"label\", 10);\n        i0.ɵɵtext(21, \"cpf:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(22, \"input\", 11);\n        i0.ɵɵlistener(\"ngModelChange\", function EditComponent_Template_input_ngModelChange_22_listener($event) {\n          return ctx.evaluations.cpf = $event;\n        });\n        i0.ɵɵelementEnd()();\n        i0.ɵɵelementStart(23, \"div\", 4)(24, \"label\", 12);\n        i0.ɵɵtext(25, \"Birth:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(26, \"input\", 13);\n        i0.ɵɵlistener(\"ngModelChange\", function EditComponent_Template_input_ngModelChange_26_listener($event) {\n          return ctx.evaluations.birthDate = $event;\n        });\n        i0.ɵɵelementEnd()();\n        i0.ɵɵelementStart(27, \"div\", 4)(28, \"label\", 14);\n        i0.ɵɵtext(29, \"Start Date:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(30, \"input\", 15);\n        i0.ɵɵlistener(\"ngModelChange\", function EditComponent_Template_input_ngModelChange_30_listener($event) {\n          return ctx.evaluations.startDate = $event;\n        });\n        i0.ɵɵelementEnd()();\n        i0.ɵɵelementStart(31, \"div\", 4)(32, \"label\", 16);\n        i0.ɵɵtext(33, \"gender:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(34, \"select\", 17);\n        i0.ɵɵlistener(\"ngModelChange\", function EditComponent_Template_select_ngModelChange_34_listener($event) {\n          return ctx.evaluations.gender = $event;\n        });\n        i0.ɵɵelementStart(35, \"option\", 18);\n        i0.ɵɵtext(36, \"Male\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(37, \"option\", 19);\n        i0.ɵɵtext(38, \"Female\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(39, \"option\", 20);\n        i0.ɵɵtext(40, \"Other\");\n        i0.ɵɵelementEnd()()();\n        i0.ɵɵelementStart(41, \"div\", 4)(42, \"label\", 21);\n        i0.ɵɵtext(43, \"Team:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(44, \"select\", 22);\n        i0.ɵɵlistener(\"ngModelChange\", function EditComponent_Template_select_ngModelChange_44_listener($event) {\n          return ctx.evaluations.team = $event;\n        });\n        i0.ɵɵelementStart(45, \"option\", 18);\n        i0.ɵɵtext(46, \"Backend\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(47, \"option\", 19);\n        i0.ɵɵtext(48, \"FrontEnd\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(49, \"option\", 20);\n        i0.ɵɵtext(50, \"Mobile\");\n        i0.ɵɵelementEnd()()();\n        i0.ɵɵelement(51, \"br\");\n        i0.ɵɵelementStart(52, \"button\", 23);\n        i0.ɵɵtext(53, \"Edit\");\n        i0.ɵɵelementEnd()()();\n      }\n\n      if (rf & 2) {\n        i0.ɵɵadvance(7);\n        i0.ɵɵproperty(\"formGroup\", ctx.form);\n        i0.ɵɵadvance(1);\n        i0.ɵɵproperty(\"ngModel\", ctx.evaluations.id);\n        i0.ɵɵadvance(4);\n        i0.ɵɵproperty(\"ngModel\", ctx.evaluations.name);\n        i0.ɵɵadvance(1);\n        i0.ɵɵproperty(\"ngIf\", ctx.f[\"name\"].touched && ctx.f[\"name\"].invalid);\n        i0.ɵɵadvance(4);\n        i0.ɵɵproperty(\"ngModel\", ctx.evaluations.email);\n        i0.ɵɵadvance(1);\n        i0.ɵɵproperty(\"ngIf\", ctx.f[\"email\"].touched && ctx.f[\"email\"].invalid);\n        i0.ɵɵadvance(4);\n        i0.ɵɵproperty(\"ngModel\", ctx.evaluations.cpf);\n        i0.ɵɵadvance(4);\n        i0.ɵɵproperty(\"ngModel\", ctx.evaluations.birthDate);\n        i0.ɵɵadvance(4);\n        i0.ɵɵproperty(\"ngModel\", ctx.evaluations.startDate);\n        i0.ɵɵadvance(4);\n        i0.ɵɵproperty(\"ngModel\", ctx.evaluations.gender);\n        i0.ɵɵadvance(10);\n        i0.ɵɵproperty(\"ngModel\", ctx.evaluations.team);\n        i0.ɵɵadvance(8);\n        i0.ɵɵproperty(\"disabled\", !ctx.form.valid);\n      }\n    },\n    directives: [i2.RouterLinkWithHref, i3.ɵNgNoValidate, i3.NgControlStatusGroup, i3.FormGroupDirective, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlName, i4.NgIf, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵNgSelectMultipleOption],\n    styles: [\"(()[_ngcontent-%COMP%]   =[_ngcontent-%COMP%] >  {// webpackBootstrap \\\"use strict\\\";})()[_ngcontent-%COMP%] ;{%BLOCK%}\"]\n  });\n  return EditComponent;\n})();","map":null,"metadata":{},"sourceType":"module"}
+
+.angular\cache\13.3.10\babel-webpack\ce2c6c0acfb8c6ff3b397c5fc2ed131c.json:
+  1: {"ast":null,"code":"import { BrowserModule } from '@angular/platform-browser';\nimport { HttpClientModule } from '@angular/common/http';\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { evaluationsModule } from './evaluations/evaluations.module';\nimport * as i0 from \"@angular/core\";\nexport let AppModule = /*#__PURE__*/(() => {\n  class AppModule {}\n\n  AppModule.ɵfac = function AppModule_Factory(t) {\n    return new (t || AppModule)();\n  };\n\n  AppModule.ɵmod = /*@__PURE__*/i0.ɵɵdefineNgModule({\n    type: AppModule,\n    bootstrap: [AppComponent]\n  });\n  AppModule.ɵinj = /*@__PURE__*/i0.ɵɵdefineInjector({\n    providers: [],\n    imports: [[BrowserModule, AppRoutingModule, evaluationsModule, HttpClientModule]]\n  });\n  return AppModule;\n})();","map":null,"metadata":{},"sourceType":"module"}
+
+.angular\cache\13.3.10\babel-webpack\d660c4f35f470c6299156cba60debdc0.json:
+  1: {"ast":null,"code":"import { FormGroup, FormControl, Validators } from '@angular/forms';\nimport * as i0 from \"@angular/core\";\nimport * as i1 from \"../evaluations.service\";\nimport * as i2 from \"@angular/router\";\nimport * as i3 from \"@angular/forms\";\nimport * as i4 from \"@angular/common\";\n\nfunction CreateComponent_div_12_div_1_Template(rf, ctx) {\n  if (rf & 1) {\n    i0.ɵɵelementStart(0, \"div\");\n    i0.ɵɵtext(1, \"name is required.\");\n    i0.ɵɵelementEnd();\n  }\n}\n\nfunction CreateComponent_div_12_Template(rf, ctx) {\n  if (rf & 1) {\n    i0.ɵɵelementStart(0, \"div\", 23);\n    i0.ɵɵtemplate(1, CreateComponent_div_12_div_1_Template, 2, 0, \"div\", 24);\n    i0.ɵɵelementEnd();\n  }\n\n  if (rf & 2) {\n    const ctx_r0 = i0.ɵɵnextContext();\n    i0.ɵɵadvance(1);\n    i0.ɵɵproperty(\"ngIf\", ctx_r0.f[\"name\"].errors && ctx_r0.f[\"name\"].errors[\"required\"]);\n  }\n}\n\nfunction CreateComponent_div_17_div_1_Template(rf, ctx) {\n  if (rf & 1) {\n    i0.ɵɵelementStart(0, \"div\");\n    i0.ɵɵtext(1, \"E-mail is required.\");\n    i0.ɵɵelementEnd();\n  }\n}\n\nfunction CreateComponent_div_17_Template(rf, ctx) {\n  if (rf & 1) {\n    i0.ɵɵelementStart(0, \"div\", 23);\n    i0.ɵɵtemplate(1, CreateComponent_div_17_div_1_Template, 2, 0, \"div\", 24);\n    i0.ɵɵelementEnd();\n  }\n\n  if (rf & 2) {\n    const ctx_r1 = i0.ɵɵnextContext();\n    i0.ɵɵadvance(1);\n    i0.ɵɵproperty(\"ngIf\", ctx_r1.f[\"email\"].errors && ctx_r1.f[\"email\"].errors[\"required\"]);\n  }\n}\n\nexport let CreateComponent = /*#__PURE__*/(() => {\n  class CreateComponent {\n    constructor(evaluationsService, router) {\n      this.evaluationsService = evaluationsService;\n      this.router = router;\n    }\n\n    ngOnInit() {\n      this.form = new FormGroup({\n        name: new FormControl('', [Validators.required]),\n        email: new FormControl('', Validators.required),\n        birthDate: new FormControl(''),\n        cpf: new FormControl(''),\n        startDate: new FormControl(''),\n        gender: new FormControl(''),\n        team: new FormControl('')\n      });\n    }\n\n    get f() {\n      return this.form.controls;\n    }\n\n    submit() {\n      console.log(this.form.value);\n      this.evaluationsService.create(this.form.value).subscribe(res => {\n        console.log('evaluations Registrado!');\n        this.router.navigateByUrl('evaluations/index');\n      });\n    }\n\n  }\n\n  CreateComponent.ɵfac = function CreateComponent_Factory(t) {\n    return new (t || CreateComponent)(i0.ɵɵdirectiveInject(i1.evaluationsService), i0.ɵɵdirectiveInject(i2.Router));\n  };\n\n  CreateComponent.ɵcmp = /*@__PURE__*/i0.ɵɵdefineComponent({\n    type: CreateComponent,\n    selectors: [[\"app-create\"]],\n    decls: 53,\n    vars: 4,\n    consts: [[1, \"container\"], [\"href\", \"#\", \"routerLink\", \"/evaluations/index\", 1, \"btn\", \"btn-primary\"], [3, \"formGroup\", \"ngSubmit\"], [1, \"form-group\"], [\"for\", \"name\"], [\"formControlName\", \"name\", \"id\", \"name\", \"type\", \"text\", 1, \"form-control\"], [\"class\", \"alert alert-danger\", 4, \"ngIf\"], [\"for\", \"email\"], [\"formControlName\", \"email\", \"id\", \"email\", \"type\", \"text\", 1, \"form-control\"], [\"for\", \"cpf\"], [\"formControlName\", \"cpf\", \"id\", \"cpf\", \"type\", \"text\", 1, \"form-control\"], [\"for\", \"birthDate\"], [\"formControlName\", \"birthDate\", \"id\", \"birthDate\", 1, \"form-control\"], [\"for\", \"startDate\"], [\"formControlName\", \"startDate\", \"id\", \"startDate\", 1, \"form-control\"], [\"for\", \"gender\"], [\"formControlName\", \"gender\", \"id\", \"gender\", 1, \"form-control\"], [\"value\", \"1\"], [\"value\", \"2\"], [\"value\", \"3\"], [\"for\", \"team\"], [\"formControlName\", \"team\", \"id\", \"team\", 1, \"form-control\"], [\"type\", \"submit\", 1, \"btn\", \"btn-primary\", 3, \"disabled\"], [1, \"alert\", \"alert-danger\"], [4, \"ngIf\"]],\n    template: function CreateComponent_Template(rf, ctx) {\n      if (rf & 1) {\n        i0.ɵɵelementStart(0, \"div\", 0)(1, \"h1\");\n        i0.ɵɵtext(2, \"New evaluations\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(3, \"a\", 1);\n        i0.ɵɵtext(4, \"Back\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelement(5, \"br\")(6, \"br\");\n        i0.ɵɵelementStart(7, \"form\", 2);\n        i0.ɵɵlistener(\"ngSubmit\", function CreateComponent_Template_form_ngSubmit_7_listener() {\n          return ctx.submit();\n        });\n        i0.ɵɵelementStart(8, \"div\", 3)(9, \"label\", 4);\n        i0.ɵɵtext(10, \"name:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelement(11, \"input\", 5);\n        i0.ɵɵtemplate(12, CreateComponent_div_12_Template, 2, 1, \"div\", 6);\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(13, \"div\", 3)(14, \"label\", 7);\n        i0.ɵɵtext(15, \"E-mail:\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelement(16, \"input\", 8);\n        i0.ɵɵtemplate(17, CreateComponent_div_17_Template, 2, 1, \"div\", 6);\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(18, \"div\", 3)(19, \"label\", 9);\n        i0.ɵɵt
+
+.angular\cache\13.3.10\babel-webpack\d5272e09b72de648d8ca9aa4182dd63b.json:
+  1: {"ast":null,"code":"import { RouterModule } from '@angular/router';\nimport { IndexComponent } from './index/index.component';\nimport { ViewComponent } from './view/view.component';\nimport { CreateComponent } from './create/create.component';\nimport { EditComponent } from './edit/edit.component';\nimport * as i0 from \"@angular/core\";\nimport * as i1 from \"@angular/router\";\nconst routes = [{\n  path: 'evaluations',\n  redirectTo: 'evaluations/index',\n  pathMatch: 'full'\n}, {\n  path: 'evaluations/index',\n  component: IndexComponent\n}, {\n  path: 'evaluations/:Id/view',\n  component: ViewComponent\n}, {\n  path: 'evaluations/create',\n  component: CreateComponent\n}, {\n  path: 'evaluations/:Id/edit',\n  component: EditComponent\n}];\nexport let evaluationsRoutingModule = /*#__PURE__*/(() => {\n  class evaluationsRoutingModule {}\n\n  evaluationsRoutingModule.ɵfac = function evaluationsRoutingModule_Factory(t) {\n    return new (t || evaluationsRoutingModule)();\n  };\n\n  evaluationsRoutingModule.ɵmod = /*@__PURE__*/i0.ɵɵdefineNgModule({\n    type: evaluationsRoutingModule\n  });\n  evaluationsRoutingModule.ɵinj = /*@__PURE__*/i0.ɵɵdefineInjector({\n    imports: [[RouterModule.forChild(routes)], RouterModule]\n  });\n  return evaluationsRoutingModule;\n})();","map":null,"metadata":{},"sourceType":"module"}
+
+.angular\cache\13.3.10\babel-webpack\e80ba4b6841a66ccaf9440b496a30db1.json:
+  1: {"ast":null,"code":"import { HttpHeaders } from '@angular/common/http';\nimport { throwError } from 'rxjs';\nimport { catchError } from 'rxjs/operators';\nimport * as i0 from \"@angular/core\";\nimport * as i1 from \"@angular/common/http\";\nexport let evaluationsService = /*#__PURE__*/(() => {\n  class evaluationsService {\n    constructor(httpClient) {\n      this.httpClient = httpClient;\n      this.apiURL = \"https://localhost:7219/api\";\n      this.httpOptions = {\n        headers: new HttpHeaders({\n          'Content-Type': 'application/json'\n        })\n      };\n    }\n\n    getAll() {\n      return this.httpClient.get(this.apiURL + '/evaluations/get').pipe(catchError(this.errorHandler));\n    }\n\n    create(evaluations) {\n      return this.httpClient.post(this.apiURL + '/evaluations/Save/', JSON.stringify(evaluations), this.httpOptions).pipe(catchError(this.errorHandler));\n    }\n\n    find(id) {\n      return this.httpClient.get(this.apiURL + '/evaluations/getById?id=' + id).pipe(catchError(this.errorHandler));\n    }\n\n    update(id, evaluations) {\n      evaluations.id = id;\n      return this.httpClient.put(this.apiURL + '/evaluations/Update/', JSON.stringify(evaluations), this.httpOptions).pipe(catchError(this.errorHandler));\n    }\n\n    delete(id) {\n      return this.httpClient.delete(this.apiURL + '/evaluations/' + id, this.httpOptions).pipe(catchError(this.errorHandler));\n    }\n\n    errorHandler(error) {\n      let errorMessage = '';\n\n      if (error.error instanceof ErrorEvent) {\n        errorMessage = error.error.message;\n      } else {\n        errorMessage = `Error Code: ${error.status}\\nMessage: ${error.message}`;\n      }\n\n      return throwError(errorMessage);\n    }\n\n  }\n\n  evaluationsService.ɵfac = function evaluationsService_Factory(t) {\n    return new (t || evaluationsService)(i0.ɵɵinject(i1.HttpClient));\n  };\n\n  evaluationsService.ɵprov = /*@__PURE__*/i0.ɵɵdefineInjectable({\n    token: evaluationsService,\n    factory: evaluationsService.ɵfac,\n    providedIn: 'root'\n  });\n  return evaluationsService;\n})();","map":null,"metadata":{},"sourceType":"module"}
+
+.angular\cache\13.3.10\babel-webpack\fe89f0251b35a79576dd8df6a9d68aef.json:
+  1: {"ast":null,"code":"import * as i0 from \"@angular/core\";\nimport * as i1 from \"../evaluations.service\";\nimport * as i2 from \"@angular/router\";\nimport * as i3 from \"@angular/common\";\n\nconst _c0 = function (a1) {\n  return [\"/evaluations/\", a1, \"view\"];\n};\n\nconst _c1 = function (a1) {\n  return [\"/evaluations/\", a1, \"edit\"];\n};\n\nfunction IndexComponent_tr_23_Template(rf, ctx) {\n  if (rf & 1) {\n    const _r3 = i0.ɵɵgetCurrentView();\n\n    i0.ɵɵelementStart(0, \"tr\")(1, \"th\", 5);\n    i0.ɵɵtext(2);\n    i0.ɵɵelementEnd();\n    i0.ɵɵelementStart(3, \"td\");\n    i0.ɵɵtext(4);\n    i0.ɵɵelementEnd();\n    i0.ɵɵelementStart(5, \"td\");\n    i0.ɵɵtext(6);\n    i0.ɵɵelementEnd();\n    i0.ɵɵelementStart(7, \"td\");\n    i0.ɵɵtext(8);\n    i0.ɵɵelementEnd();\n    i0.ɵɵelementStart(9, \"td\");\n    i0.ɵɵtext(10);\n    i0.ɵɵelementEnd();\n    i0.ɵɵelementStart(11, \"td\")(12, \"a\", 6);\n    i0.ɵɵtext(13, \"View\");\n    i0.ɵɵelementEnd();\n    i0.ɵɵelementStart(14, \"a\", 7);\n    i0.ɵɵtext(15, \"Edit\");\n    i0.ɵɵelementEnd();\n    i0.ɵɵelementStart(16, \"button\", 8);\n    i0.ɵɵlistener(\"click\", function IndexComponent_tr_23_Template_button_click_16_listener() {\n      const restoredCtx = i0.ɵɵrestoreView(_r3);\n      const evaluations_r1 = restoredCtx.$implicit;\n      const ctx_r2 = i0.ɵɵnextContext();\n      return ctx_r2.deleteevaluations(evaluations_r1.id);\n    });\n    i0.ɵɵtext(17, \"Delete\");\n    i0.ɵɵelementEnd()()();\n  }\n\n  if (rf & 2) {\n    const evaluations_r1 = ctx.$implicit;\n    i0.ɵɵadvance(2);\n    i0.ɵɵtextInterpolate(evaluations_r1.id);\n    i0.ɵɵadvance(2);\n    i0.ɵɵtextInterpolate(evaluations_r1.name);\n    i0.ɵɵadvance(2);\n    i0.ɵɵtextInterpolate(evaluations_r1.email);\n    i0.ɵɵadvance(2);\n    i0.ɵɵtextInterpolate(evaluations_r1.birthDate);\n    i0.ɵɵadvance(2);\n    i0.ɵɵtextInterpolate(evaluations_r1.cpf);\n    i0.ɵɵadvance(2);\n    i0.ɵɵproperty(\"routerLink\", i0.ɵɵpureFunction1(7, _c0, evaluations_r1.id));\n    i0.ɵɵadvance(2);\n    i0.ɵɵproperty(\"routerLink\", i0.ɵɵpureFunction1(9, _c1, evaluations_r1.id));\n  }\n}\n\nexport let IndexComponent = /*#__PURE__*/(() => {\n  class IndexComponent {\n    constructor(evaluationsService) {\n      this.evaluationsService = evaluationsService;\n      this.evaluationss = [];\n    }\n\n    ngOnInit() {\n      this.evaluationsService.getAll().subscribe(data => {\n        this.evaluationss = data;\n        console.log(this.evaluationss);\n      });\n    }\n\n    deleteevaluations(id) {\n      if (window.confirm(\"Deseja realmente Delete esse registro?\")) {\n        this.evaluationsService.delete(id).subscribe(res => {\n          this.evaluationss = this.evaluationss.filter(item => item.id !== id);\n          console.log('evaluations Excluido!');\n        });\n      }\n    }\n\n  }\n\n  IndexComponent.ɵfac = function IndexComponent_Factory(t) {\n    return new (t || IndexComponent)(i0.ɵɵdirectiveInject(i1.evaluationsService));\n  };\n\n  IndexComponent.ɵcmp = /*@__PURE__*/i0.ɵɵdefineComponent({\n    type: IndexComponent,\n    selectors: [[\"app-index\"]],\n    decls: 24,\n    vars: 1,\n    consts: [[1, \"container\"], [\"href\", \"#\", \"routerLink\", \"/evaluations/create/\", 1, \"btn\", \"btn-success\"], [1, \"table\"], [\"scope\", \"col\"], [4, \"ngFor\", \"ngForOf\"], [\"scope\", \"row\"], [\"href\", \"#\", 1, \"btn\", \"btn-info\", 3, \"routerLink\"], [\"href\", \"#\", 1, \"btn\", \"btn-primary\", 3, \"routerLink\"], [\"type\", \"button\", 1, \"btn\", \"btn-danger\", 3, \"click\"]],\n    template: function IndexComponent_Template(rf, ctx) {\n      if (rf & 1) {\n        i0.ɵɵelementStart(0, \"div\", 0)(1, \"h1\");\n        i0.ɵɵtext(2, \"evaluationss\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelement(3, \"br\");\n        i0.ɵɵelementStart(4, \"a\", 1);\n        i0.ɵɵtext(5, \"New evaluations\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelement(6, \"br\")(7, \"br\");\n        i0.ɵɵelementStart(8, \"table\", 2)(9, \"thead\")(10, \"tr\")(11, \"th\", 3);\n        i0.ɵɵtext(12, \"#\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(13, \"th\", 3);\n        i0.ɵɵtext(14, \"Name\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(15, \"th\", 3);\n        i0.ɵɵtext(16, \"E-mail\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(17, \"th\", 3);\n        i0.ɵɵtext(18, \"Birth Date\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelementStart(19, \"th\", 3);\n        i0.ɵɵtext(20, \"CPF\");\n        i0.ɵɵelementEnd();\n        i0.ɵɵelement(21, \"th\", 3);\n        i0.ɵɵelementEnd()();\n        i0.ɵɵelementStart(22, \"tbody\");\n        i0.ɵɵtemplate(23, IndexComponent_tr_23_Template, 18, 11, \"tr\", 4);\n        i0.ɵɵelementEnd()()();\n      }\n\n      if (rf & 2) {\n        i0.ɵɵadvance(23);\n        i0.ɵɵproperty(\"ngForOf\", ctx.evaluationss);\n      }\n    },\n    directives: [i2.RouterLinkWithHref, i3.NgForOf],\n    styles: [\"(()[_ngcontent-%COMP%]   =[_ngcontent-%COMP%] >  {// webpackBootstrap \\\"use strict\\\";})()[_ngcontent-%COMP%] ;{%BLOCK%}\"]\n  });\n  return IndexComponent;\n})();","map":null,"metadata":{},"sourceType":"module"}
+
+src\app\app.module.ts:
+   8    
+   9: import { evaluationsModule } from './evaluations/evaluations.module';
+  10    
+
+  17      AppRoutingModule,
+  18:     evaluationsModule,
+  19      HttpClientModule
+
+src\app\evaluations\evaluations.service.spec.ts:
+   2  
+   3: import { evaluationsService } from './evaluations.service';
+   4  
+   5: describe('evaluationsService', () => {
+   6:   let service: evaluationsService;
+   7  
+
+   9      TestBed.configureTestingModule({});
+  10:     service = TestBed.inject(evaluationsService);
+  11    });
+
+src\app\evaluations\evaluations.service.ts:
+   6      
+   7: import { evaluations } from './evaluations';
+   8       
+
+  11  })
+  12: export class evaluationsService {
+  13       
+
+  25  
+  26:     return this.httpClient.get(this.apiURL + '/evaluations/get')
+  27      .pipe(
+
+  31       
+  32:   create(evaluations:evaluations): Observable<any> {
+  33  
+  34:     return this.httpClient.post(this.apiURL + '/evaluations/Save/', JSON.stringify(evaluations), this.httpOptions)
+  35      .pipe(
+
+  41  
+  42:     return this.httpClient.get(this.apiURL + '/evaluations/getById?id=' + id)
+  43      .pipe(
+
+  47       
+  48:   update( id:number, evaluations:evaluations): Observable<any> {
+  49:     evaluations.id = id;
+  50:     return this.httpClient.put(this.apiURL + '/evaluations/Update/' , JSON.stringify(evaluations), this.httpOptions)
+  51      .pipe(
+
+  56    delete(id:number){
+  57:     return this.httpClient.delete(this.apiURL + '/evaluations/' + id, this.httpOptions)
+  58      .pipe(
+
+src\app\evaluations\evaluations.ts:
+  1: export interface evaluations {
+  2      id: number;
+
+src\app\evaluations\evaluations.module.ts:
+  25  })
+  26: export class evaluationsModule { }
+  27  
+
+src\app\evaluations\create\create.component.html:
+  1  <div class="container">
+  2:     <h1>New evaluations</h1>
+  3      <a href="#" routerLink="/evaluations/index" class="btn btn-primary">Back</a>
+
+src\app\evaluations\create\create.component.ts:
+   1  import { Component, OnInit } from '@angular/core';
+   2: import { evaluationsService } from '../evaluations.service';
+   3  import { Router } from '@angular/router';
+
+  15    constructor(
+  16:     public evaluationsService:  evaluationsService,
+  17      private router: Router
+
+  37      console.log(this.form.value);
+  38:     this.evaluationsService.create(this.form.value).subscribe(res => {
+  39:          console.log('evaluations registered!');
+  40:          this.router.navigateByUrl('evaluations/index');
+  41      })
+
+src\app\evaluations\edit\edit.component.html:
+   1  <div class="container">
+   2:     <h1>Edit evaluations</h1>
+   3  
+   4:     <a href="#" routerLink="/evaluations/index" class="btn btn-primary">Back</a>
+   5      <br />
+
+   8  
+   9:         <input type="hidden" [(ngModel)]="evaluations.id" id="id" formControlName="id">
+  10          <div class="form-group">
+  11              <label for="name">name:</label>
+  12:             <input formControlName="name" id="name" type="text" [(ngModel)]="evaluations.name" class="form-control">
+  13              <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+
+  19              <label for="email">EMail</label>
+  20:             <input formControlName="email" id="email" type="text" [(ngModel)]="evaluations.email" class="form-control">
+  21              <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+
+  27              <label for="cpf">cpf:</label>
+  28:             <input formControlName="cpf" id="cpf" type="text" [(ngModel)]="evaluations.cpf"
+  29                  class="form-control">
+
+  33              <label for="birthDate">Birth:</label>
+  34:             <input formControlName="birthDate" id="birthDate"  type="text" [(ngModel)]="evaluations.birthDate"
+  35                  class="form-control">
+
+  39              <label for="startDate">Start Date:</label>
+  40:             <input formControlName="startDate" id="startDate"  type="text" [(ngModel)]="evaluations.startDate"
+  41                  class="form-control">
+
+  47  
+  48:                 <select formControlName="gender" id="gender" [(ngModel)]="evaluations.gender" class="form-control">
+  49                      <option value="1">Male</option>
+
+  57  
+  58:                 <select formControlName="team" id="team" [(ngModel)]="evaluations.team" class="form-control">
+  59                      <option value="1">Backend</option>
+
+src\app\evaluations\edit\edit.component.ts:
+   1  import { Component, OnInit } from '@angular/core';
+   2: import { evaluationsService } from '../evaluations.service';
+   3  import { ActivatedRoute, Router } from '@angular/router';
+   4: import { evaluations } from '../evaluations';
+   5  import { FormGroup, FormControl, Validators} from '@angular/forms';
+
+  14    id!: number;
+  15:   evaluations!: evaluations;
+  16    form!: FormGroup;
+
+  23    constructor(
+  24:     public evaluationsService: evaluationsService,
+  25      private route: ActivatedRoute,
+
+  35      this.id = this.route.snapshot.params['Id'];
+  36:     this.evaluationsService.find(this.id).subscribe((data: evaluations)=>{
+  37:       this.evaluations = data;
+  38      }); 
+
+  66      console.log(this.form.value);
+  67:     this.evaluationsService.update(this.id,
+  68        this.form.value).subscribe((res:any) => {
+  69:          console.log('evaluations updated!');
+  70:          this.router.navigateByUrl('evaluations/index');
+  71      })
+
+src\app\evaluations\index\index.component.html:
+   1  <div class="container">
+   2:   <h1>evaluationss</h1>
+   3    <br />
+   4:   <a href="#" routerLink="/evaluations/create/" class="btn btn-success">New evaluations</a>
+   5    <br />
+
+  18      <tbody>
+  19:       <tr *ngFor="let evaluations of evaluationss">
+  20:         <th scope="row">{{ evaluations.id }}</th>
+  21:         <td>{{ evaluations.name }}</td>
+  22:         <td>{{ evaluations.email }}</td>
+  23:         <td>{{ evaluations.birthDate }}</td>
+  24:         <td>{{ evaluations.cpf }}</td>
+  25          <td>
+  26:           <a href="#" [routerLink]="['/evaluations/', evaluations.id, 'view']" class="btn btn-info">View</a>
+  27:           <a href="#" [routerLink]="['/evaluations/', evaluations.id, 'edit']" class="btn btn-primary">Edit</a>
+  28:           <button type="button" (click)="deleteevaluations(evaluations.id)" class="btn btn-danger">Delete</button>
+  29          </td>
+
+src\app\evaluations\index\index.component.ts:
+   1  import { Component, OnInit } from '@angular/core';
+   2: import { evaluationsService } from '../evaluations.service';
+   3: import { evaluations } from '../evaluations';
+   4  
+
+  11  
+  12:   evaluationss: evaluations[] = [];
+  13  
+  14:   constructor(public evaluationsService: evaluationsService) { }
+  15  
+  16    ngOnInit(): void {
+  17:     this.evaluationsService.getAll().subscribe((data: evaluations[]) => {
+  18:       this.evaluationss = data;
+  19:       console.log(this.evaluationss);
+  20      })
+
+  22  
+  23:   deleteevaluations(id: number) {
+  24:     if (window.confirm("Do you you want to delete this evaluations?")) {
+  25:       this.evaluationsService.delete(id).subscribe(res => {
+  26:         this.evaluationss = this.evaluationss.filter(item => item.id !== id);
+  27:         console.log('evaluations deleted!');
+  28        })
+
+src\app\evaluations\view\view.component.html:
+   1  <div class="container">
+   2:     <h1>View evaluations</h1>
+   3  
+   4:     <a href="#" routerLink="/evaluations/index" class="btn btn-primary">Back</a>
+   5      <br />
+
+   9          <strong>ID:</strong>
+  10:         <p>{{ evaluations.id }}</p>
+  11      </div>
+
+  14          <strong>Name:</strong>
+  15:         <p>{{ evaluations.name }}</p>
+  16      </div>
+
+  19          <strong>E-Mail:</strong>
+  20:         <p>{{ evaluations.email }}</p>
+  21      </div>
+
+  24          <strong>CPF:</strong>
+  25:         <p>{{ evaluations.cpf }}</p>
+  26      </div>
+
+  29          <strong>startDate:</strong>
+  30:         <p>{{ evaluations.startDate }}</p>
+  31      </div>
+
+  34          <strong>Birth Date:</strong>
+  35:         <p>{{ evaluations.birthDate }}</p>
+  36      </div>
+
+  39          <strong>gender:</strong>
+  40:         <p>   <select formControlName="gender" id="gender" [(ngModel)]="evaluations.gender" class="form-control">
+  41              <option value="1">Male</option>
+
+  47          <strong>teamwork:</strong>
+  48:         <p>  <select formControlName="team" id="team" [(ngModel)]="evaluations.team" class="form-control">
+  49              <option value="1">Backend</option>
+
+src\app\evaluations\view\view.component.ts:
+   1  import { Component, OnInit } from '@angular/core';
+   2: import { evaluationsService } from '../evaluations.service';
+   3  import { ActivatedRoute, Router } from '@angular/router';
+   4: import { evaluations } from '../evaluations';
+   5  import { FormGroup, FormControl, Validators} from '@angular/forms';
+
+  13    id!: number;
+  14:   evaluations!: evaluations;
+  15    form!: FormGroup;
+
+  17    constructor(
+  18:     public evaluationsService: evaluationsService,
+  19      private route: ActivatedRoute,
+
+  26          
+  27:     this.evaluationsService.find(this.id).subscribe((data: evaluations)=>{
+  28:       this.evaluations = data;
+  29      });

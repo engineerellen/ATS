@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>View evaluations</h1>
+
+    <a href="#" routerLink="/evaluations/index" class="btn btn-primary">Back</a>
+    <br />
+    <br />
+    <form [formGroup]="form"  >
+    <div>
+        <strong>ID:</strong>
+        <p>{{ evaluations.id }}</p>
+    </div>
+
+    <div>
+        <strong>Course:</strong>
+        <p>{{ evaluations.course_student_id }}</p>
+    </div>
+
+    <div>
+        <strong>Stars:</strong>
+        <p>{{ evaluations.stars }}</p>
+    </div>
+
+    <div>
+        <strong>Description:</strong>
+        <p>{{ evaluations.description }}</p>
+    </div>
+
+    <div>
+        <strong>Creation Date:</strong>
+        <p>{{ evaluations.creation_date }}</p>
+    </div>
+    </form>
+    <br />
+</div>

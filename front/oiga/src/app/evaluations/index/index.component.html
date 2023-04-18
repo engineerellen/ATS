@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>evaluations</h1>
+  <br />
+  <a href="#" routerLink="/evaluations/create/" class="btn btn-success">New evaluations</a>
+  <br />
+  <br />
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Course</th>
+        <th scope="col">Stars</th>
+        <th scope="col">Creation Date</th>
+        <th scope="col">Description</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let evaluations of evaluationss">
+        <th scope="row">{{ evaluations.id }}</th>
+        <td>{{ evaluations.course_student_id }}</td>
+        <td>{{ evaluations.stars }}</td>
+        <td>{{ evaluations.creation_date }}</td>
+        <td>{{ evaluations.description }}</td>
+        <td>
+          <a href="#" [routerLink]="['/evaluations/', evaluations.id, 'view']" class="btn btn-info">View</a>
+          <a href="#" [routerLink]="['/evaluations/', evaluations.id, 'edit']" class="btn btn-primary">Edit</a>
+          <button type="button" (click)="deleteevaluations(evaluations.id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
